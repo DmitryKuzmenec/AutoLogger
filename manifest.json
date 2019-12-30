@@ -1,0 +1,23 @@
+{
+	"name":"AutoLogin",
+	"description":"Logging to supplier sites with given credentials",
+	"manifest_version":2,
+	"version":"0.0.0.1",
+	"permissions":[],
+	"content_scripts":[
+		{
+			"matches": ["https://www.totalstay.com/*"],
+			"js": ["jquery-3.4.1.min.js","totalstay.js"],
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["http://www.restel.es/*"],
+			"js": ["jquery-3.4.1.min.js","restel.js"],
+			"run_at": "document_end",
+			"all_frames": true
+		}
+	],
+	"page_action": {
+		"default_icon": "skoosh.png"
+	}
+}
